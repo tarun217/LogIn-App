@@ -161,7 +161,7 @@ public class Register extends AppCompatActivity {
                 String gnder = gender_;
 
 
-                if(fname.equals("") || lname.equals("") ||email.equals("") || pwd.equals("") || cnf_pwd.equals(pwd)){
+                if(fname.equals("") || lname.equals("") ||email.equals("") || pwd.equals("") || !cnf_pwd.equals(pwd)){
                     Toast.makeText(Register.this, "Fill all the fields!", Toast.LENGTH_SHORT).show();
                 }
 
@@ -185,20 +185,21 @@ public class Register extends AppCompatActivity {
 
             }
         });
-     genderGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-         @Override
-         public void onCheckedChanged(RadioGroup group, int i) {
-          if(i==R.id.radiobutton_female){
-              gender_="Female";
-          }else if(i==R.id.radiobutton_male){
-              gender_="Male";
-          }
+        genderGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int i) {
+                if(i==R.id.radiobutton_female){
+                    gender_="Female";
+                }else if(i==R.id.radiobutton_male){
+                    gender_="Male";
+                }
 
-         }
-     });
+            }
+        });
 
 
 
     }
 
 }
+

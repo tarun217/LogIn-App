@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     EditText mTextPassword;
     Button mButtonLogin;
     Button mButtonRegister;
-    RadioButton fmale,male;
     SharedPreferences sp;
 
     private static final String KEY_EMAIL = "e_mail";
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         String email = sp.getString(KEY_EMAIL, null);
         if(email != null){
-            Intent intent = new Intent(MainActivity.this, home.class);
+            Intent intent = new Intent(MainActivity.this, HomePage.class);
             startActivity(intent);
         }
         myDb = new DatabaseHelper(this);
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         editor.apply();
 
 
-                        Intent intent = new Intent(MainActivity.this, home.class);
+                        Intent intent = new Intent(MainActivity.this, HomePage.class);
                         startActivity(intent);
                     }
                     else{
@@ -81,8 +79,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
 
 
