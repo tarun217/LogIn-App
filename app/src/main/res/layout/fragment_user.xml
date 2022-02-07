@@ -4,31 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomePage">
+    tools:context=".UserFrag">
+
+    <!-- TODO: Update blank fragment layout -->
 
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text=" Welcome!"
+        android:gravity="center_horizontal"
+        android:text="welcome"
         android:textAlignment="center"
         android:textSize="35sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcome"
@@ -38,20 +39,21 @@
         android:id="@+id/wl_fName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="First Name"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="52dp"
+        android:text="first_name"
         android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/message" />
 
     <TextView
         android:id="@+id/wl_lName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="60dp"
-        android:text="Last Name"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="92dp"
+        android:text="last_name"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/wl_fName" />
@@ -60,9 +62,9 @@
         android:id="@+id/wl_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:text="Gender"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="32dp"
+        android:text="gender"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wl_lName" />
@@ -71,65 +73,67 @@
         android:id="@+id/wl_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="60dp"
-        android:text="Email Id"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="52dp"
+        android:text="email"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/wl_gender" />
 
     <TextView
         android:id="@+id/wl_et_fName"
-        android:layout_width="4dp"
-        android:layout_height="0dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="52dp"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/wl_fName"
+        app:layout_constraintStart_toEndOf="@+id/wl_fName"
         app:layout_constraintTop_toBottomOf="@+id/message" />
 
     <TextView
         android:id="@+id/wl_et_lName"
-        android:layout_width="4dp"
-        android:layout_height="28dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="56dp"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/wl_lName"
-        app:layout_constraintTop_toBottomOf="@+id/wl_fName" />
+        app:layout_constraintTop_toBottomOf="@+id/wl_et_fName" />
 
     <TextView
         android:id="@+id/wl_et_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="32dp"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/wl_gender"
-        app:layout_constraintTop_toBottomOf="@+id/wl_lName"
-        android:layout_marginTop="26dp"
-        android:layout_marginLeft="10dp"/>
+        app:layout_constraintStart_toEndOf="@+id/wl_gender"
+        app:layout_constraintTop_toBottomOf="@+id/wl_et_lName" />
 
     <TextView
         android:id="@+id/wl_et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginTop="24dp"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/wl_email"
-        app:layout_constraintTop_toBottomOf="@+id/wl_gender" />
+        app:layout_constraintStart_toEndOf="@+id/wl_email"
+        app:layout_constraintTop_toBottomOf="@+id/wl_et_gender" />
 
     <Button
         android:id="@+id/wl_btn_logout"
-        android:layout_width="174dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="56dp"
-        android:text="Back To Login Page"
-        android:textSize="16sp"
-        app:layout_constraintHorizontal_bias="0.915"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:text="logout"
+        android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wl_email" />

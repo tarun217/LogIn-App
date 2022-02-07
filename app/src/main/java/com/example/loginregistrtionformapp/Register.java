@@ -11,7 +11,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import  android.widget.CheckBox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -188,9 +187,9 @@ public class Register extends AppCompatActivity {
         genderGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int i) {
-                if(i==R.id.radiobutton_female){
+                if(i== R.id.radiobutton_female){
                     gender_="Female";
-                }else if(i==R.id.radiobutton_male){
+                }else if(i== R.id.radiobutton_male){
                     gender_="Male";
                 }
 

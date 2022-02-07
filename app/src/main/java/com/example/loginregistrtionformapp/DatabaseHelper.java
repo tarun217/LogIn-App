@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper{
     public DatabaseHelper(Context context) {
         super(context, "user_db", null, 1);
@@ -41,7 +43,28 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
     }
 
+    public ArrayList<Mclass> getUserData(String gender){
+        SQLiteDatabase myDB = this.getReadableDatabase();
+        ArrayList<Mclass> modelClassArrayList = new ArrayList<>();
 
+        Cursor cursor = myDB.rawQuery("select * from users where gender like '" + gender + "'", null);
+        if(cursor.getCount() != 0){
+            cursor.moveToPosition(-1);
+
+            while (cursor.moveToNext()){
+                String user_fName = cursor.getString(0);
+                String user_lName = cursor.getString(1);
+                String user_gender = cursor.getString(2);
+                String user_email = cursor.getString(3);
+
+                modelClassArrayList.add(new Mclass(user_fName, user_lName, user_gender, user_email));
+            }
+            return modelClassArrayList;
+        }
+        else {
+            return null;
+        }
+    }
 
     public boolean checkemail(String email){
         SQLiteDatabase myDB = this.getWritableDatabase();
